@@ -47,7 +47,7 @@ public class LoginPage extends BasePage {
     }
 
     //登录操作
-    public void login(String username,String password,String yanzhneg) throws InterruptedException {
+    public MyAcountPage login(String username,String password,String yanzhneg) throws InterruptedException {
         System.out.println(this.url);
         this.open(this.url);
         this.input_username().sendKeys(username);
@@ -55,6 +55,7 @@ public class LoginPage extends BasePage {
         this.input_yanzheng().sendKeys(yanzhneg);
         this.login_btn().click();
         Thread.sleep(3000);
+        return new MyAcountPage(driver);
     }
 
     //获取用户输入框错误提示

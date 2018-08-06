@@ -2,6 +2,7 @@ package market.testcases;
 
 import market.driver.MyDriver;
 import market.pages.LoginPage;
+import market.pages.MyAcountPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,6 +11,7 @@ import org.testng.annotations.Test;
 import sun.awt.windows.ThemeReader;
 
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 
 public class LoginTest {
@@ -45,8 +47,10 @@ public class LoginTest {
 
     @Test
     public void test3_login_success() throws InterruptedException {
-        this.lg.login("13658524695", "123456", "1");
+        MyAcountPage my = this.lg.login("13658524695", "123456", "1");
         Thread.sleep(3000);
+        String text3 = my.login_success_text();
+        assertTrue(text3.contains("您好"));
 
     }
 

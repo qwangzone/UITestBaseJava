@@ -68,6 +68,7 @@ public class BasePage {
     public void switch_alert(String alert){
         Alert aler = driver.switchTo().alert();
         aler.accept();
+
     }
 
     //竖向拉动滚动条
