@@ -12,6 +12,11 @@ public class MyAcountPage extends BasePage{
         return this.by_css("li.subNav>a").getText();
     }
 
+    //打开我的账户页面
+    public void open(){
+        this.open(this.url);
+    }
+
     //风险承受能力
     public String riskrate(){
         return this.by_xpath("/html/body/div[6]/div[5]/div[1]/div[1]/div[2]/a").getText();

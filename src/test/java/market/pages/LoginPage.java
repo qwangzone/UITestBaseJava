@@ -48,7 +48,7 @@ public class LoginPage extends BasePage {
 
     //登录操作
     public MyAcountPage login(String username,String password,String yanzhneg) throws InterruptedException {
-        System.out.println(this.url);
+        //System.out.println(this.url);
         this.open(this.url);
         this.input_username().sendKeys(username);
         this.input_pass().sendKeys(password);

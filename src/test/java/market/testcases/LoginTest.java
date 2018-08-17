@@ -50,7 +50,8 @@ public class LoginTest {
         MyAcountPage my = this.lg.login("13658524695", "123456", "1");
         Thread.sleep(3000);
         String text3 = my.login_success_text();
-        assertTrue(text3.contains("您好"));
+        //System.out.println(text3);
+        assertTrue(text3.contains("账户总览"));
 
     }
 
